@@ -7,11 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.main-container {
+  min-height: 100vh;
+}
 main {
-  padding: 1rem;
+  flex: 1;
 }
 
-header {
+/* header {
   background-color: darkgray;
   padding: 1rem;
 }
@@ -20,7 +23,7 @@ header a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-}
+} */
 
 .products {
   display: flex;
