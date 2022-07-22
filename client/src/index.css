@@ -31,6 +31,10 @@ header a {
   justify-content: center;
 }
 
+.rating span {
+  color: gold;
+}
+
 .product {
   border: 1px solid #404040;
   /* border-radius: 10px; */
