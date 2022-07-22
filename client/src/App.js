@@ -1,8 +1,8 @@
 // import data from './data/data';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
-import Product from './components/Product';
+import ProductPage from './components/ProductPage';
 import Navbar from 'react-bootstrap/Navbar';
 import Badge from 'react-bootstrap/Badge';
 import Nav from 'react-bootstrap/Nav';
@@ -10,9 +10,12 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
 import Button from 'react-bootstrap/Button';
+import { Store } from './Store';
 
 function App() {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
+  const { state } = useContext(Store);
+  const { cart } = state;
   // const [categories, setCategories] = useState([]);
   return (
     <BrowserRouter>
@@ -30,15 +33,25 @@ function App() {
               <LinkContainer to="/">
                 <Navbar.Brand>Gebeya</Navbar.Brand>
               </LinkContainer>
+              <Nav className="me-auto">
+                <Link to="/cart" className="nav-link">
+                  Cart
+                  {cart.cartItems.length > 0 && (
+                    <Badge pill bg="danger">
+                      {cart.cartItems.length}
+                    </Badge>
+                  )}
+                </Link>
+              </Nav>
             </Container>
           </Navbar>
           {/* <Link to="/">Gebeya</Link> */}
         </header>
         <main>
-          <Container>
+          <Container className="mt-3">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/product/:slug" element={<Product />} />
+              <Route path="/product/:slug" element={<ProductPage />} />
             </Routes>
           </Container>
         </main>
