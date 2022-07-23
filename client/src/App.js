@@ -11,6 +11,8 @@ import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { Store } from './Store';
+import Cart from './components/Cart';
+import Signin from './components/Signin';
 
 function App() {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -38,7 +40,7 @@ function App() {
                   Cart
                   {cart.cartItems.length > 0 && (
                     <Badge pill bg="danger">
-                      {cart.cartItems.length}
+                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
                     </Badge>
                   )}
                 </Link>
@@ -51,6 +53,8 @@ function App() {
           <Container className="mt-3">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/signin" element={<Signin />} />
               <Route path="/product/:slug" element={<ProductPage />} />
             </Routes>
           </Container>
