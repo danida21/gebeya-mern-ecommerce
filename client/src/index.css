@@ -61,3 +61,13 @@ header a {
 .sm-container {
   max-width: 650px;
 }
+
+.checkout-steps > div {
+  border-bottom: solid 0.2rem #a0a0a0;
+  color: #a0a0a0;
+}
+
+.checkout-steps > div.active {
+  border-bottom: 0.2rem solid #0e63d3;
+  color: #0e63d3;
+}
