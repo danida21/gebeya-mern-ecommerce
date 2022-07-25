@@ -16,6 +16,9 @@ import Cart from './components/Cart';
 import Signin from './components/Signin';
 import Shipping from './components/Shipping';
 import Signup from './components/Signup';
+import PaymentMethod from './components/PaymentMethod';
+import PlaceOrder from './components/PlaceOrder';
+import Order from './components/Order';
 
 function App() {
   // const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
@@ -26,6 +29,7 @@ function App() {
     ctxDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress');
+    localStorage.removeItem('paymentMethod');
   };
 
   return (
@@ -89,6 +93,9 @@ function App() {
               <Route path="/shipping" element={<Shipping />} />
               <Route path="/signin" element={<Signin />} />
               <Route path="/signup" element={<Signup />} />
+              <Route path="/payment" element={<PaymentMethod />} />
+              <Route path="/placeorder" element={<PlaceOrder />} />
+              <Route path="/order/:id" element={<Order />} />
               <Route path="/product/:slug" element={<ProductPage />} />
             </Routes>
           </Container>
