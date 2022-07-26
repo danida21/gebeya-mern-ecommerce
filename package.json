@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "This is mern stack based ecommerce web application",
   "main": "index.js",
+  "engines": {
+    "node": "16.13.1",
+    "npm": "6.9.0"
+  },
   "scripts": {
     "build": "cd backend && npm install && cd ../client && npm install &&  npm run build --force",
     "start": "node backend/index.js",
