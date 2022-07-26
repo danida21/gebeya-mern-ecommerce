@@ -1,4 +1,3 @@
-// import data from './data/data';
 import { useContext, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
@@ -23,7 +22,6 @@ import OrderHistory from './components/OrderHistory';
 import Profile from './components/Profile';
 
 function App() {
-  // const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart, userInfo } = state;
 
@@ -42,15 +40,8 @@ function App() {
         <header>
           <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
-              {/* <Button
-                variant="dark"
-                onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
-              >
-                <i className="fas fa-bars"></i>
-              </Button> */}
-
               <LinkContainer to="/">
-                <Navbar.Brand>Gebeya</Navbar.Brand>
+                <Navbar.Brand>Gebeya/Merkato</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse>
@@ -89,7 +80,6 @@ function App() {
               </Navbar.Collapse>
             </Container>
           </Navbar>
-          {/* <Link to="/">Gebeya</Link> */}
         </header>
         <main>
           <Container className="mt-3">
