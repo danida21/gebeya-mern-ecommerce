@@ -4,12 +4,12 @@
   "description": "This is mern stack based ecommerce web application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+    "build": "cd backend && npm install && cd ../client && npm install && npm run build --force",
+    "start": "node backend/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
-    "node": "10.16.0"
+    "node": "18.2.0"
   },
   "repository": {
     "type": "git",
