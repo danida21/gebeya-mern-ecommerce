@@ -4,7 +4,7 @@
   "description": "This is mern stack based ecommerce web application",
   "main": "index.js",
   "scripts": {
-    "build": "cd backend && npm install && cd ../client && npm install && CI='false' npm run build --force",
+    "build": "cd backend && npm install && cd ../client && npm install &&  npm run build --force",
     "start": "node backend/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
