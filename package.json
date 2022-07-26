@@ -4,9 +4,12 @@
   "description": "This is mern stack based ecommerce web application",
   "main": "index.js",
   "scripts": {
-    "build": "cd backend && npm install && cd ../client && npm install && npm run build",
+    "build": "cd backend && npm install && cd ../client && npm install && npm run build --force",
     "start": "node backend/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "18.2.0"
   },
   "repository": {
     "type": "git",
