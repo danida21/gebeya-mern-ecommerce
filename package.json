@@ -8,10 +8,6 @@
     "start": "node backend/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines": {
-    "node": "18.2.0",
-    "npm": "8.9"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danida21/gebeya-mern-ecommerce.git"
