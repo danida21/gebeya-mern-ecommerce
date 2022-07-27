@@ -41,7 +41,7 @@ function App() {
           <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
               <LinkContainer to="/">
-                <Navbar.Brand>Gebeya/Merkato</Navbar.Brand>
+                <Navbar.Brand>Gebeya</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse>
