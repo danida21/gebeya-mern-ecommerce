@@ -71,3 +71,24 @@ header a {
   border-bottom: 0.2rem solid #0e63d3;
   color: #0e63d3;
 }
+
+.site-container {
+  transition: 0.4s;
+}
+.navbar-brand {
+  font-weight: bold;
+}
+.sidebar-nav {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  left: -300px;
+  background-color: #100901;
+  transition: 0.5s;
+}
+.active-container {
+  margin-left: 240px;
+}
+.active-nav {
+  left: 0;
+}
